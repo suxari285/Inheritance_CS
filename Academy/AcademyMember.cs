@@ -16,11 +16,15 @@ namespace Academy
             ) : base(lastName, firstName, age)
         {
             this.Speciality = speciality;
-            Console.WriteLine($"AConstructor:\t{GetHashCode()}");
+#if DEBUG
+            Console.WriteLine($"AConstructor:\t{GetHashCode()}"); 
+#endif
         } 
         ~AcademyMember()
         {
-            Console.WriteLine($"ADestructor{GetHashCode()}");
+#if DEBUG
+            Console.WriteLine($"ADestructor{GetHashCode()}"); 
+#endif
         }
         public override string ToString()
         {

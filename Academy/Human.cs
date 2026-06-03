@@ -16,11 +16,16 @@ namespace Academy
             LastName = lastName;
             FirstName = firstName;
             Age = age;
-            Console.WriteLine($"HConstructor:\t{GetHashCode()}");
+#if DEBUG
+            Console.WriteLine($"HConstructor:\t{GetHashCode()}"); 
+#endif
         }
-        ~Human() 
+        ~Human()
         {
-            Console.WriteLine($"HDestructor:\t{GetHashCode()}");
+#if DEBUG
+		
+            Console.WriteLine($"HDestructor:\t{GetHashCode()}"); 
+#endif
         }
 
         //              Methods
