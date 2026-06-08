@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 using System.IO;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace Academy
 {
@@ -58,6 +59,8 @@ namespace Academy
                 new Teacher("Colonel", "Cortez" , 50,"Weapons distrinution" , 25)
             };
 
+            Directory.SetCurrentDirectory($"{Application.ExecutablePath}\\..\\..\\..");
+            Console.WriteLine(Directory.GetCurrentDirectory());
             for(int i=0; i <group.Length; i++)
             {
                 Console.WriteLine(group[i]);
