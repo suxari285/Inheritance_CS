@@ -19,7 +19,17 @@ namespace Academy
 #if DEBUG
             Console.WriteLine($"AConstructor:\t{GetHashCode()}"); 
 #endif
-        } 
+        }
+        
+        public AcademyMember(Human human,string speciality) :base(human)
+        {
+            this.Speciality=speciality;
+        }
+        public AcademyMember(AcademyMember other) :base(other)
+        {
+            this.Speciality=other.Speciality;
+        }
+
         ~AcademyMember()
         {
 #if DEBUG
