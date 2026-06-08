@@ -48,5 +48,10 @@ namespace Academy
             //return base.ToString();
             return $"{LastName.PadRight(12)}{FirstName.PadRight(12)}{Age.ToString().PadLeft(2).PadRight(3)}";
         }
+
+        public virtual string ToFileString()
+        {
+            return $"{this.GetType().ToString().Split('.').Last()}:{LastName},{FirstName},{Age}";
+        }
     }
 }

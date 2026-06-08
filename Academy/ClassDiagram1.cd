@@ -3,35 +3,35 @@
   <Class Name="Academy.Human">
     <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAEAEAAAAAAAAAAAAAAAAAAAEAAAAg=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAEAEAAAAAAAAAAAAQAAAAAAEAAAAg=</HashCode>
       <FileName>Human.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Academy.Student">
     <Position X="2.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAEAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAEAAAAAAAAAAAAAAUAAAAAAAAAAAA=</HashCode>
       <FileName>Student.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Academy.Teacher">
     <Position X="12.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAQAA=</HashCode>
       <FileName>Teacher.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Academy.AcademyMember">
     <Position X="7.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAACAAA=</HashCode>
       <FileName>AcademyMember.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Academy.Graduate">
     <Position X="2.25" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAIAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>Graduate.cs</FileName>
     </TypeIdentifier>
   </Class>

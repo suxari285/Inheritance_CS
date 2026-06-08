@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.IO;
+using System.Diagnostics;
+
 namespace Academy
 {
     internal class Program
@@ -54,10 +57,20 @@ namespace Academy
                 new Graduate("Rosenberg", "Ken", 35, "Law", "Vice", 32, 25, "How to make money"),
                 new Teacher("Colonel", "Cortez" , 50,"Weapons distrinution" , 25)
             };
+
             for(int i=0; i <group.Length; i++)
             {
                 Console.WriteLine(group[i]);
             }
+            string filename = "Group.csv";
+            StreamWriter writer = new StreamWriter(filename);
+            foreach(Human h in group)
+            {
+                writer.WriteLine(h.ToFileString()+";");
+            }
+            writer.Close();
+            Process.Start("notepad", filename);
+            
         }
     }
 }
