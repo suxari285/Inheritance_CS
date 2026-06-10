@@ -1,5 +1,6 @@
 ﻿//#define INHERITANCEPART1
 //#define INHERITANCEPART2
+#define WRITE_TO_FILE
 
 using System;
 using System.Collections.Generic;
@@ -50,6 +51,7 @@ namespace Academy
             Console.WriteLine(graduate);
 #endif
 
+#if WRITE_TO_FILE
             //1)Upcast:
             Human[] group = new Human[]
             {
@@ -58,22 +60,32 @@ namespace Academy
                 new Graduate("Rosenberg", "Ken", 35, "Law", "Vice", 32, 25, "How to make money"),
                 new Teacher("Colonel", "Cortez" , 50,"Weapons distrinution" , 25)
             };
+            Print(group);
+            Save(group, "group.csv");
 
-            Directory.SetCurrentDirectory($"{Application.ExecutablePath}\\..\\..\\..");
-            Console.WriteLine(Directory.GetCurrentDirectory());
-            for(int i=0; i <group.Length; i++)
+#endif
+
+        }
+        static void Print(Human[] group)
+        {
+            for (int i = 0; i < group.Length; i++)
             {
                 Console.WriteLine(group[i]);
             }
-            string filename = "Group.csv";
+        }
+        static void Save(Human[] group, string filename)
+        {
+            Directory.SetCurrentDirectory($"{Application.ExecutablePath}\\..\\..\\..");
+            Console.WriteLine(Directory.GetCurrentDirectory());
+            //string filename = "Group.csv";
             StreamWriter writer = new StreamWriter(filename);
-            foreach(Human h in group)
+            foreach (Human h in group)
             {
-                writer.WriteLine(h.ToFileString()+";");
+                writer.WriteLine(h.ToFileString() + ";");
             }
             writer.Close();
             Process.Start("notepad", filename);
-            
         }
+        
     }
 }
