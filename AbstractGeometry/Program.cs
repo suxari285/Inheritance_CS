@@ -30,6 +30,12 @@ namespace AbstractGeometry
 
             Rectangle rectangle = new Rectangle(500, 320, 400, 200, 5, Color.Red);
             rectangle.Info(e);
+
+            Circle circle = new Circle(100,600,600,3,Color.Blue);
+            circle.Info(e);
+
+            Square square = new Square(150,350,350,10,Color.GreenYellow);
+            square.Info(e);
         }
         [DllImport("kernel32.dll")]
         public static extern IntPtr GetConsoleWindow();
