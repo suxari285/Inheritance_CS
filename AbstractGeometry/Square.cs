@@ -8,14 +8,14 @@ using System.Windows.Forms;
 
 namespace AbstractGeometry
 {
-    internal class Square:Shape
+    internal class Square:Rectangle
     {
         public double Side { get; set; }
         public Square
             (
                 double side,
                 int startX, int startY, int lineWidth, Color color
-            ) : base(startX, startY, lineWidth, color)
+            ) : base(side,side,startX, startY, lineWidth, color)
         {
             Side = side;
         }
@@ -29,7 +29,6 @@ namespace AbstractGeometry
         }
         public override void Draw(PaintEventArgs e)
         {
-            //Console.WriteLine("Нужно нарисовать прямоугольник");
             Pen pen = new Pen(Color, LineWidth);
             e.Graphics.DrawRectangle(pen, StartX, StartY, (float)Side, (float)Side);
         }

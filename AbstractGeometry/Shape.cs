@@ -21,7 +21,7 @@ namespace AbstractGeometry
             this.LineWidth = lineWidth;
             this.Color = color;
         }
-        public abstract double GetArea();
+        public abstract double GetArea();   
         public abstract double GetPerimetr();
         public abstract void Draw(PaintEventArgs e);
         public virtual void Info(PaintEventArgs e)
