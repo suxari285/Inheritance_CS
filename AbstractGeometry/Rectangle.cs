@@ -37,13 +37,13 @@ namespace AbstractGeometry
         {
             Pen pen = new Pen(Color,LineWidth);
             e.Graphics.DrawRectangle(pen, StartX, StartY, (float)Width, (float)Height);
+            DrawDiagonal(e);
         }
         public override void Info(PaintEventArgs e)
         {
             Console.WriteLine($"Ширина прямоугольника: {Width}");
             Console.WriteLine($"Высота прямоугольника: {Height}");
             Console.WriteLine($"Диагональ: {GetDiagonal()}");
-            DrawDiagonal(e);
             base.Info(e);
         }
         public void DrawDiagonal(PaintEventArgs e)
